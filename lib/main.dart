@@ -4,8 +4,8 @@ import 'config/theme.dart';
 // import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'manage/cubit/domain/cubit_home/home_cubit.dart';
 import 'package:get/get.dart';
-import 'manage/getx/presentation/home.dart';
-import 'manage/getx/presentation/people.dart';
+import 'manage/_getx/presentation/home.dart';
+import 'manage/_getx/presentation/people.dart';
  
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

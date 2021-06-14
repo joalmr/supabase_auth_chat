@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/config/shared_preference.dart';
-import 'package:supabase_flutter/manage/getx/domain/chatController.dart';
+import 'package:supabase_flutter/manage/_getx/domain/chatController.dart';
 
 class PeopleView extends StatelessWidget {
   final mensaje = TextEditingController();
