@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:supabase_flutter/domain/getx/homeController.dart';
+import 'package:supabase_flutter/manage/getx/domain/homeController.dart';
 
 class HomeView extends StatelessWidget {
 

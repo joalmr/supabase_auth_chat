@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/data/auth/authRepo.dart';
-import 'package:supabase_flutter/presentation/getx/people.dart';
+import 'package:supabase_flutter/manage/getx/presentation/people.dart';
 
 class HomeController extends GetxController {
   final _repo = AuthRepo();
