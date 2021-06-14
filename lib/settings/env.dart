@@ -1,0 +1,2 @@
+const url = 'https://hqitjzldmeqpphwhitkl.supabase.co';
+const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYyMjcwODk3OSwiZXhwIjoxOTM4Mjg0OTc5fQ.gpuc_tKsSWg4Fr4SjQwvQwPl9kuvdq_bn_MCtPkJ9z0';
