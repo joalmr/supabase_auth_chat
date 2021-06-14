@@ -23,7 +23,23 @@ class MyApp extends StatelessWidget {
       title: 'Chat',
       themeMode: ThemeMode.light,
       theme: temaClaro,
-      home: prefs.token.isEmpty ? HomeView() : PeopleView(),
+      initialRoute: '/',
+      getPages: [
+        GetPage(
+          name: '/',
+          page: () => prefs.token.isEmpty
+            ? HomeView()
+            : PeopleView(),
+        ),
+        GetPage(
+          name: 'home',
+          page: () => HomeView(),
+        ),
+        GetPage(
+          name: 'welcome',
+          page: () => PeopleView(),
+        ),
+      ],
     );
 
     //* cubit

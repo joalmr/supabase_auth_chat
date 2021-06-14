@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:supabase/supabase.dart';
+import 'package:supabase_flutter/data/auth/authRepo.dart';
 import 'package:supabase_flutter/data/model/canalModel.dart';
 import 'package:supabase_flutter/data/model/messageModel.dart';
 import 'package:supabase_flutter/data/model/userModel.dart';
@@ -8,6 +9,7 @@ import 'package:supabase_flutter/data/chat/chatRepo.dart';
 
 class ChatController extends GetxController {
   final _repo = ChatRepo();
+  final _auth = AuthRepo();
 
   RxList<UserModel> users = <UserModel>[].obs;
   RxList<CanalModel> chats = <CanalModel>[].obs;
@@ -30,6 +32,13 @@ class ChatController extends GetxController {
   void onClose() {
     super.onClose();
     supabaseClient.removeSubscription(subscription);
+  }
+
+  logout() => _logout();
+  _logout() async {
+    print('logout');
+    await _auth.signOut();
+    Get.offAllNamed('home');
   }
 
   getAllUsers() => _getAllUsers();

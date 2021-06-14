@@ -12,7 +12,12 @@ class PeopleView extends StatelessWidget {
       init: ChatController(),
       builder: (_){
         return Scaffold(
-          appBar: AppBar(title: Text('Bienvenido'),),
+          appBar: AppBar(
+            title: Text('Bienvenido'),
+            actions: [
+              IconButton(icon: Icon(Icons.logout), onPressed: () => _.logout() )
+            ],
+          ),
           body: DefaultTabController(
             length: 2,
             child: Column(

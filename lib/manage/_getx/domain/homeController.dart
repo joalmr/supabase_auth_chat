@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/data/auth/authRepo.dart';
-import 'package:supabase_flutter/manage/_getx/presentation/people.dart';
 
 class HomeController extends GetxController {
   final _repo = AuthRepo();
@@ -18,7 +17,6 @@ class HomeController extends GetxController {
   }
 
   register() => _register();
-
   _register() async {
     final response = await _repo.signUp(regEmail.value, regPassword.value);
     if(response){
@@ -31,11 +29,10 @@ class HomeController extends GetxController {
   }
 
   login() => _login();
-
   _login() async {
     final response = await _repo.signIn(email.value, password.value);
     if(response){
-      Get.off(PeopleView());
+      Get.offNamed('welcome');
     }
     else{
       Get.dialog(AlertDialog(title: Text('No se pudo ingresar'),));
