@@ -9,7 +9,6 @@ import 'manage/_getx/presentation/people.dart';
  
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // await GetStorage.init();
   await prefs.initPrefs();
   runApp(MyApp());
 }
